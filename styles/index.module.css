@@ -1,0 +1,12 @@
+.container {
+  background: #ddd;
+  padding: 0 2rem;
+}
+
+.main {
+  color: blue;
+  font-size: 3vh;
+  min-height: 100vh;
+  padding: 2rem;
+  text-decoration: underline;
+}

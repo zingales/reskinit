@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "incremental": true,
+    "module": "commonjs",
+    "noEmit": false,
+    "outDir": "./typescript-node-build",
+    "target": "ES2018"
+  }
+}
