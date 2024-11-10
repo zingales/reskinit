@@ -15,7 +15,7 @@ const Card: FC = () => {
               legacyBehavior
               href={{
                 pathname: '/card',
-                query: { rank: card.rank, suit: card.suit, blah: 3 },
+                query: { rank: card.rank, suit: card.suit },
               }}
             >
               <a>

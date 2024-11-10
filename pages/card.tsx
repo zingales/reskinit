@@ -12,9 +12,7 @@ export const CardQueryParams = z.object({
 });
 export type CardQueryParams = z.infer<typeof CardQueryParams>;
 
-const getBaseDeckFilename = ({ rank, suit }: CardQueryParams) => {
-  `/static/base_deck/${rank.toUpperCase()}${suit[0].toUpperCase()}.svg`;
-};
+const getStandardDeckFilename = ({ rank, suit }: CardQueryParams) => `${rank}_of_${suit}.svg`;
 
 const Card: FC = () => {
   const router = useRouter();
@@ -28,9 +26,13 @@ const Card: FC = () => {
     return queryParams.data;
   }, [router.query]);
 
+  if (queryParams === null) {
+    return null;
+  }
+
   return (
     <PageWrapper>
-      <img src="/static/base_deck/AH.svg" />
+      <img src={`/static/standard_deck/${getStandardDeckFilename(queryParams)}`} />
     </PageWrapper>
   );
 };
