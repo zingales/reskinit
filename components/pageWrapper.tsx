@@ -6,14 +6,24 @@ export const PageWrapper: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <>
       <Head>
-        <title>TODO: Title</title>
+        <title>Reskinit</title>
 
         <meta name="viewport" content="initial-scale=1, width=device-width" />
-        <meta name="description" content="TODO: some description" />
+        <meta name="description" content="App for reskining games" />
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <main>{children}</main>
+      <style>{`
+        main {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          width: 100vw;
+        }
+      `}</style>
     </>
   );
 };
