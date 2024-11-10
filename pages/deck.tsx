@@ -11,7 +11,13 @@ const Card: FC = () => {
       <PageWrapper>
         {STANDARD_DECK.map((card, index) => (
           <div key={index}>
-            <Link legacyBehavior href="/card">
+            <Link
+              legacyBehavior
+              href={{
+                pathname: '/card',
+                query: { rank: card.rank, suit: card.suit, blah: 3 },
+              }}
+            >
               <a>
                 {card.rank} of {card.suit}
               </a>
