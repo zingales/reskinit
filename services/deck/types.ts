@@ -56,5 +56,3 @@ for (const suit of Suit.options) {
     STANDARD_DECK.push({ rank, suit });
   }
 }
-
-console.log(STANDARD_DECK);
