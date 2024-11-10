@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { Container } from '@mui/material';
 import Head from 'next/head';
 import { ReactNode } from 'react';
 
@@ -14,15 +15,10 @@ export const PageWrapper: FC<{ children: ReactNode }> = ({ children }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>{children}</main>
+      <main>
+        <Container>{children}</Container>
+      </main>
       <style>{`
-        main {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
-          width: 100vw;
-        }
       `}</style>
     </>
   );
