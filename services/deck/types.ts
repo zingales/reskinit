@@ -46,3 +46,15 @@ export const Card = z.object({
   suit: Suit,
 });
 export type Card = z.infer<typeof Card>;
+
+export const Deck = z.array(Card);
+export type Deck = z.infer<typeof Deck>;
+
+export const STANDARD_DECK: Deck = [];
+for (const suit of Suit.options) {
+  for (const rank of Rank.options) {
+    STANDARD_DECK.push({ rank, suit });
+  }
+}
+
+console.log(STANDARD_DECK);
