@@ -3,6 +3,7 @@ import React from 'react';
 import { FC } from 'react';
 import { Box, Button, Typography } from '@mui/material';
 import { PageWrapper } from '../components/pageWrapper';
+import Link from 'next/link';
 
 const Home: FC = () => {
   return (
@@ -46,14 +47,13 @@ const Home: FC = () => {
           }}
         >
           <Button variant="contained" color="primary">
-            Reskin Something
+            <Link href={{ pathname: '/deck' }}>Reskin Something</Link>
           </Button>
           <Button variant="outlined" color="primary">
-            See other reskinnings
+            <Link href={{ pathname: '/discover' }}>See other reskinnings</Link>
           </Button>
         </Box>
       </Box>
-      <Button href="/deck">Deck</Button>
     </PageWrapper>
   );
 };
